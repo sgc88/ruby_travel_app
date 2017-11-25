@@ -1,0 +1,8 @@
+
+<h3><%= @destination.city %></h3>
+<p><%=  @destination.date %></p>
+<p><%=  @destination.budget %></p>
+<p><%=  @destination.organizer %></p>
+<p><%=  @destination.plans %></p>
+<%= button_to "Edit", edit_destination_path(@destination) %>
+<%= button_to "Delete", destination_path(@destination), method: :delete%>
