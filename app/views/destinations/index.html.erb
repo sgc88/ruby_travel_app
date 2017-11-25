@@ -5,8 +5,8 @@
   <p><strong>Budget:</strong> <%=  destination.budget %></p>
   <p><strong>Organizer:</strong> <%=  destination.organizer %></p>
   <p><strong>Plans:</strong> <%=  destination.plans %></p>
-  <%= link_to "Edit", edit_destination_path(destination) %>
-  <%= button_to "Delete", destination_path(destination), method: :delete%>
+  <%= link_to "Edit", edit_destination_path(destination), class: "btn btn-primary" %>
+  <%= button_to "Delete", destination_path(destination), method: :delete, class: "btn btn-danger"%>
 </div>
 <br>
 <hr>

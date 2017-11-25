@@ -10,7 +10,7 @@ class DestinationsController < ApplicationController
   end
 
   def create
-    destination_params = params.require(:destination).permit(:location, :date, :budget, :organizer, :plans)
+    destination_params = params.require(:destination).permit(:city, :date, :budget, :organizer, :plans)
     destination = Destination.new(destination_params)
     if destination.save
       redirect_to destinations_path
@@ -41,7 +41,7 @@ class DestinationsController < ApplicationController
 
   private
   def destination_params
-    params.require(:destination).permit(:location, :date, :budget, :organizer, :plans)
+    params.require(:destination).permit( :city, :location, :date, :budget, :organizer, :plans)
   end
 
 end

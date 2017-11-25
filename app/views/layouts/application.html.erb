@@ -10,30 +10,77 @@
 
   <body>
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">TravelApp</a>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <div id="navbar" class="collapse navbar-collapse" >
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Destinations", destinations_path %></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Create Destination", new_destination_path %></li>
+      <a class="navbar-brand" href="#">TravelApp</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <div id="navbar" class="collapse navbar-collapse" >
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Destinations", destinations_path %></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "Create Destination", new_destination_path %></li>
+            </ul>
+          </div>
         </ul>
       </div>
-    </ul>
-  </div>
 </nav>
+<header class="masthead">
+  <div class="intro-body">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <%= yield %>
+        <div class="col-lg-8 mx-auto">
+          <h1 class="brand-heading">TravelApp</h1>
+          <p class="intro-text">Your helpful traveling friend..
+            <br>Created by Sherry</p>
+          <a href="#about" class="btn btn-circle js-scroll-trigger">
+            <i class="fa fa-angle-double-down animated"></i>
+          </a>
         </div>
       </div>
     </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+<section id="contact" class="content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact Us</h2>
+          <p>Feel free to leave us a comment on the following:</p>
+          <ul class="list-inline banner-social-buttons">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/sehribangulen" class="btn btn-default btn-lg">
+                <i class="fa fa-twitter fa-fw"></i>
+                <span class="network-name">Twitter</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://sheilala-maxy.com" class="btn btn-default btn-lg">
+                <i class="fa fa-github fa-fw"></i>
+                <span class="network-name">Facebook</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="sehri@hotmail.com" class="btn btn-default btn-lg">
+                <i class="fa fa-google-plus fa-fw"></i>
+                <span class="network-name">email+</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+<footer>
+   <div class="container text-center">
+     <p>Copyright &copy; Your Website 2017</p>
+   </div>
+</footer>
   </body>
 </html>
