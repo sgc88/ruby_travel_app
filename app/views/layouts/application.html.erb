@@ -2,12 +2,11 @@
 <html>
   <head>
     <title>TravelApp</title>
-    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag   "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
-
   <body>
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
       <a class="navbar-brand" href="#">TravelApp</a>
@@ -40,6 +39,11 @@
     </div>
   </div>
 </header>
+<% if current_user %>
+  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+<% else %>
+  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
