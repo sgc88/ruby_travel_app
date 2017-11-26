@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get "/destinations/:id/edit", to: "destinations#edit", as: "edit_destination"
   patch "/destinations/:id", to: "destinations#update"
   delete "/destinations/:id", to: "destinations#destroy"
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 end
