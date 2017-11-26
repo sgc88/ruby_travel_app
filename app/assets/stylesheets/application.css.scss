@@ -15,3 +15,16 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "destinations";
+
+ body{
+   background-image: url("2.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+#navbarSupportedContent{
+  background-color: white;
+}
+#navbar{
+  float:right;
+}

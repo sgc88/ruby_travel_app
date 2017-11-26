@@ -1,13 +1,13 @@
 <% @destinations.each do |destination| %>
-<div>
-  <p><strong>City:</strong> <%= destination.city %></p>
-  <p><strong>Date:</strong> <%=  destination.date %></p>
-  <p><strong>Budget:</strong> <%=  destination.budget %></p>
-  <p><strong>Organizer:</strong> <%=  destination.organizer %></p>
-  <p><strong>Plans:</strong> <%=  destination.plans %></p>
-  <%= link_to "Edit", edit_destination_path(destination), class: "btn btn-primary" %>
-  <%= button_to "Delete", destination_path(destination), method: :delete, class: "btn btn-danger"%>
-</div>
-<br>
-<hr>
+  <div>
+    <p><strong>City:</strong> <%= destination.city %></p>
+    <p><strong>Date:</strong> <%=  destination.date %></p>
+    <p><strong>Budget:</strong> <%=  destination.budget %></p>
+    <p><strong>Organizer:</strong> <%=  destination.organizer %></p>
+    <p><strong>Plans:</strong> <%=  destination.plans %></p>
+    <%= link_to "Edit", edit_destination_path(destination), class: "btn btn-primary" %>
+    <%= button_to "Delete", destination_path(destination), method: :delete, class: "btn btn-danger"%>
+  </div>
+  <br>
+  <hr>
 <% end %>
