@@ -21,11 +21,13 @@
             </ul>
           </div>
         </ul>
-        <% if current_user %>
-          Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
-        <% else %>
-          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-        <% end %>
+        <div class="user-access">
+          <% if current_user %>
+            Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          <% else %>
+            <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+          <% end %>
+        </div>
       </div>
 </nav>
 <header class="masthead">
@@ -34,8 +36,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h1 class="brand-heading">TravelApp</h1>
-          <p class="intro-text">Your helpful traveling friend..
-            <br>Created by Sherry</p>
+          <p class="intro-text">Your helpful traveling friend..</p>
           <a href="#about" class="btn btn-circle js-scroll-trigger">
             <i class="fa fa-angle-double-down animated"></i>
           </a>
@@ -56,36 +57,35 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Contact Us</h2>
-          <p>Feel free to leave us a comment on the following:</p>
+          <h2 class="contactUs">Contact Us</h2>
+          <p id="contact1">Feel free to leave us a comment on the following:</p>
           <ul class="list-inline banner-social-buttons">
             <li class="list-inline-item">
-              <a href="https://twitter.com/sehribangulen" class="btn btn-default btn-lg">
-                <i class="fa fa-twitter fa-fw"></i>
+              <a href="#" class="btn btn-default btn-lg contact1">
                 <span class="network-name">Twitter</span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://sheilala-maxy.com" class="btn btn-default btn-lg">
-                <i class="fa fa-github fa-fw"></i>
+              <a href="#" class="btn btn-default btn-lg contact1">
                 <span class="network-name">Facebook</span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="sehri@hotmail.com" class="btn btn-default btn-lg">
+              <a href="#" class="btn btn-default btn-lg contact1">
                 <i class="fa fa-google-plus fa-fw"></i>
-                <span class="network-name">email+</span>
+                <span class="network-name">email</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
+    <footer>
+       <div class="container text-center">
+         <p>Copyright &copy; Your Website 2017</p>
+       </div>
+    </footer>
 </section>
-<footer>
-   <div class="container text-center">
-     <p>Copyright &copy; Your Website 2017</p>
-   </div>
-</footer>
+
   </body>
 </html>
